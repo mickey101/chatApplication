@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  mongo:
+    hostname: mongodb
+    container_name: mongodb-docker
+    image: mongo:latest
+    expose:
+      - 27017
+    ports:
+      - 27017:27017
+    restart: always
+  chat-api:
+    image: chat-api-v1:latest
+    ports:
+      - 8080:8080
+    links:
+      - mongo
+  chat-ui:
+    image: chat-ui-v1:latest
+    ports:
+      - 3000:3000

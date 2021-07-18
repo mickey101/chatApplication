@@ -1,0 +1,17 @@
+# Spring properties
+spring:
+  application:
+    name: chatApp
+  data:
+    mongodb:
+#      uncomment the following to run it locally
+#      uri: mongodb://localhost:27017/test
+#      uncomment the following to run it with docker compose
+      host: mongodb
+      database: test
+      port: 27017
+#     upto here
+    mongo.repositories.enabled: true
+events:
+  connection:
+    timeout: 18000
