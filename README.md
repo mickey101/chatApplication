@@ -9,12 +9,9 @@ A simple Chat application based
 1. Build a docker image of the chat-api
 #### `cd chat-api`
 #### `mvn clean package`
-#### `docker build --tag chat-api-v1:latest .`
 
-2. Build a docker image of the chat-ui
-#### `cd chat-ui`
-#### `docker build --tag chat-ui-v1:latest .`
-
-3. Docker Compose up
+2. Build docker compose
+#### `cd ..`
 #### `docker-compose up`
+
 

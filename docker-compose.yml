@@ -10,12 +10,12 @@ services:
       - 27017:27017
     restart: always
   chat-api:
-    image: chat-api-v1:latest
+    build: chat-api
     ports:
       - 8080:8080
     links:
       - mongo
   chat-ui:
-    image: chat-ui-v1:latest
+    build: chat-ui
     ports:
       - 3000:3000
